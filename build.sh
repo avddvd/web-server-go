@@ -25,4 +25,5 @@ docker rm -f "$image"
 docker rmi -f "$image"
 echo "Building $image"
 docker build -t "$image" . || exit 1
+rm -rf ./bin/http-server
 echo "Done."
