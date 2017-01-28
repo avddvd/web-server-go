@@ -2,7 +2,8 @@
 
 cd "$(dirname "$0")"
 
-image="http-server"
+commit=$( git rev-parse HEAD | cut -c 1-10 )
+image="http-server:$commit"
 DIR="/go/src/github.com/avddvd/web-server-go"
 # create the image to use to do the compiling:
 echo "Creating the build container."
