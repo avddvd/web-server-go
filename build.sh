@@ -21,7 +21,6 @@ docker run \
 
 # build the docker image:
 echo "Cleaning up."
-docker kill "$image"
 docker rm -f "$image"
 docker rmi -f "$image"
 echo "Building $image"
